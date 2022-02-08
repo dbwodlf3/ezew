@@ -1,6 +1,6 @@
 {
   "name": "ezew",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "EZ Evenet Watcher for mvvm pattern.",
   "main": "dest/src/index.js",
   "scripts": {

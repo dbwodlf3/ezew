@@ -3,27 +3,44 @@
 ```ts
 import ezew from "ezew";
 
-interface CommentData {
-    username: string;
-    text: string;
-    date: string;
+class Item(){
+    id: number;
+
+    construnctor(id:number){ 
+        this.id = id;
+    }
 }
 
-const updateTemplate = (commentData : CommentData)=>{
-    // ...
+const items:Item[] = []
+const items2:Item[] = []
+const itemId = 0;
+
+function addItem(id:number){
+    const item = new Item(id);
+    items.push(item);
+    items2.push(item);
+    return item;
 }
 
-const updateAlarmTemplate = (commentData: CommentData)=>{
-    // ...
+function removeItem(id:number){
+    items[id] = undefined;
 }
 
-ezew.addEventWatcher("AddCommentData", updateTemplate);
-ezew.addEventWatcher("AddCommentData", updateAlarmTemplate);
+(()=>{
+    const a = addItem(itemId++)
+    const b = addItem(itemId++)
+    const c = addItem(itemId++)
+})()
 
-function updateComment(){
-    // ...
-    ezew.dispatchEvent("AddCommentData", commentData);
-}
+ezew.addEventWatcher("RemoveItem", (item:Item)=>{
+    // Remove from items
+    items[item.id] = undefined;
 
-updateCommentData()
+    // Remove from items2
+    items2[item.id] = undefined;
+})
+
+ezew.dispatchEvenet("RemoveItem", this.items[0]);
+ezew.dispatchEvenet("RemoveItem", this.items[1]);
+ezew.dispatchEvenet("RemoveItem", this.items[2]);
 ```

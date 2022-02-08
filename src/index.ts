@@ -1,21 +1,21 @@
-const context: Context = {
+const _context: Context = {
     events: {}
 };
 
 export function addEventWatcher(eventId: string, callback: Callback){
-    if(context.events[eventId]) return context.events[eventId].push(callback);
-    else context.events[eventId] = [];
-    return context.events[eventId].push(callback);
+    if(_context.events[eventId]) return _context.events[eventId].push(callback);
+    else _context.events[eventId] = [];
+    return _context.events[eventId].push(callback);
 }
 
 export function dispatchEvent(eventId: string, any?: any){
-    for(const event of context.events[eventId]) {
+    for(const event of _context.events[eventId]) {
         event(any);
     }
 }
 
 export function getEvenets(){
-    return context.events;
+    return _context.events;
 }
 
 export default {
