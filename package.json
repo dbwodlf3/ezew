@@ -1,13 +1,26 @@
 {
   "name": "ezew",
   "version": "1.0.0",
-  "description": "",
+  "description": "EZ Evenet Watcher for mvvm pattern.",
   "main": "dest/src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npx ts-node ./scripts/build.ts"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dbwodlf3/ezew.git"
+  },
+  "keywords": [
+    "mvvm",
+    "event",
+    "reactive"
+  ],
+  "bugs": {
+    "url": "https://github.com/dbwodlf3/ezew/issues"
+  },
+  "homepage": "https://github.com/dbwodlf3/ezew",
+  "author": "dbwodlf3",
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^17.0.15",
