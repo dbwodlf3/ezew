@@ -1,0 +1,16 @@
+{
+  "name": "ezew",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dest/src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx ts-node ./scripts/build.ts"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^17.0.15",
+    "browserify": "^17.0.0"
+  }
+}
